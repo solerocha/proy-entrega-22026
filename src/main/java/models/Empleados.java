@@ -3,13 +3,13 @@ package models;
 public class Empleados {
 	
 	private int id_emp;
-	private int dni;
+	private String dni;
 	private String nombre;
 	private String apellido;
 	private int nroDep;
 	
 	
-	public Empleados(int id_emp, int dni, String nombre, String apellido, int nroDep) {
+	public Empleados(int id_emp, String dni, String nombre, String apellido, int nroDep) {
 		super();
 		this.id_emp = id_emp;
 		this.dni = dni;
@@ -24,10 +24,10 @@ public class Empleados {
 	public void setId_emp(int id_emp) {
 		this.id_emp = id_emp;
 	}
-	public int getDni() {
+	public String getDni() {
 		return dni;
 	}
-	public void setDni(int dni) {
+	public void setDni(String dni) {
 		this.dni = dni;
 	}
 	public String getNombre() {

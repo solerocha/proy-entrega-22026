@@ -32,7 +32,7 @@ public class EmpleadosDAO {
 				int id = rs.getInt("id_emp");
 				String nombre = rs.getString("nombre");
 				String apellido = rs.getString("apellido");
-				int dni = rs.getInt("dni");
+				String dni = rs.getString("dni");
 				int nroDep = rs.getInt("nroDep");
 				Empleados empleado = new Empleados(id, dni, nombre, apellido, nroDep );
 				lista.add(empleado);
@@ -51,7 +51,7 @@ public class EmpleadosDAO {
 		try {
 			ps = conexion.prepareStatement("insert into empleados (dni, nombre,apellido,nroDep) values(?,?,?,?)");
 			// ps.setString(0, null);
-			ps.setInt(1, empleado.getDni());
+			ps.setString(1, empleado.getDni());
 			ps.setString(2, empleado.getNombre());
 			ps.setString(3, empleado.getApellido());
 			ps.setInt(4, empleado.getNroDep());
@@ -68,7 +68,7 @@ public class EmpleadosDAO {
 		PreparedStatement ps;
 		try {
 			ps = conexion.prepareStatement("update empleados set dni=? ,nombre=? ,apellido=?, nroDep=?, where id_emp=?");
-			ps.setInt(1, empleado.getDni());
+			ps.setString(1, empleado.getDni());
 			ps.setString(2, empleado.getNombre());
 			ps.setString(3, empleado.getApellido());
 			ps.setInt(4, empleado.getNroDep());
@@ -107,7 +107,7 @@ public class EmpleadosDAO {
 				int id = rs.getInt("id_emp");
 				String nombre = rs.getString("nombre");
 				String apellido = rs.getString("apellido");
-				int dni = rs.getInt("dni");
+				String dni = rs.getString("dni");
 				int nroDep = rs.getInt("nroDep");
 				empleado = new Empleados(id, dni, nombre, apellido, nroDep );
 			}

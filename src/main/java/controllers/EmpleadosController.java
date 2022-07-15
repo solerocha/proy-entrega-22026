@@ -61,7 +61,7 @@ public class EmpleadosController extends HttpServlet {
 			int id = Integer.parseInt(request.getParameter("id_emp"));
 			String nombre = request.getParameter("nombre");
 			String apellido = request.getParameter("apellido");
-			int dni = Integer.parseInt(request.getParameter("dni"));
+			String dni = request.getParameter("dni");
 			int nrodep = Integer.parseInt(request.getParameter("nroDep"));
 			Empleados empleado = new Empleados(id, dni, nombre, apellido, nrodep);
 			empDAO.updateEmployee(empleado);
@@ -79,7 +79,7 @@ public class EmpleadosController extends HttpServlet {
 		else if (accion.equals("insert")) {
 			String nombre = request.getParameter("nombre");
 			String apellido = request.getParameter("apellido");
-			int dni = Integer.parseInt(request.getParameter("dni"));
+			String dni = request.getParameter("dni");
 			int nrodep = Integer.parseInt(request.getParameter("nroDep"));
 			Empleados empleado = new Empleados(0, dni, nombre, apellido, nrodep);
 			empDAO.insertEmployee(empleado);
