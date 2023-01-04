@@ -1,5 +1,2 @@
-# proy-entrega-22026
+# CRUD sobre un sistema de empleados y socios
 Proyecto Java Codo a Codo 2022
-
-Tecnologías:
-Java - MySQL - 
